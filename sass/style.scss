@@ -15,6 +15,7 @@
         url("../font/Josefin/JosefinSans-Regular.ttf") format("truetype");
     font-weight: normal;
 }
+
 @font-face {
     font-family: "JosefinSans-Light";
     src: local("JosefinSans-Light"),
@@ -47,9 +48,9 @@
 :root {
     --lightPurple: #7975CB;
     --darkPurple: #5A4F9E;
-    --white:#fff;
-    --borderWhite:#eaeaeb;
-    --lightWhite:#E6E6E6;
+    --white: #fff;
+    --borderWhite: #eaeaeb;
+    --lightWhite: #E6E6E6;
     --primaryFont: 'JosefinSans-Regular';
     --lightFont: 'JosefinSans-Light';
     --secondaryFont: 'Smyhte-Regular';
@@ -121,7 +122,7 @@
                 text-decoration: none;
                 font-family: var(--primaryFont);
                 font-size: 0.95rem;
-                color:var(--white);
+                color: var(--white);
                 margin: 0 5px;
                 height: 100%;
                 overflow: hidden;
@@ -152,41 +153,48 @@
             }
         }
     }
-    .container{
+
+    .container {
         @include flexprops(row, space-between, center);
         padding: 0px 45px;
-        min-height: 100vh; 
+        min-height: 100vh;
         margin-top: -50px;
         position: relative;
         z-index: 10;
-        .text{
+
+        .text {
             width: 100%;
             @include flexprops(column, center, flex-start);
-            p{
+
+            p {
                 font-family: var(--primaryFont);
                 color: var(--lightPurple);
                 font-size: 1.25rem;
                 line-height: 1.8rem;
             }
-            h1{
+
+            h1 {
                 font-family: var(--secondaryFont);
-                color:var(--white);
+                color: var(--white);
                 font-size: 5rem;
                 line-height: 5.6rem;
                 font-weight: 500;
                 margin: 7px 0;
             }
-            .desc{
+
+            .desc {
                 font-family: var(--lightFont);
                 color: var(--lightWhite);
                 font-size: 1.25rem;
                 line-height: 1.8rem;
                 margin-top: 2px;
             }
-            .buttonContainer{
+
+            .buttonContainer {
                 @include flexprops(row, flex-start, center);
-                margin-top:35px;
-                a{
+                margin-top: 35px;
+
+                a {
                     text-decoration: none;
                     height: 50px;
                     text-align: center;
@@ -201,39 +209,47 @@
                     border: 1px solid #fff;
                     color: var(--white);
                     transition: all 0.3s;
-                    &:hover{
+
+                    &:hover {
                         color: var(--lightPurple);
                         background-color: var(--white);
                     }
                 }
-                a.first{
+
+                a.first {
                     margin: 0 7px 0 0;
                     border: none;
                     background-color: var(--lightPurple);
                     color: var(--white);
                     transition: all 0.3s;
-                    &:hover{
+
+                    &:hover {
                         background-color: var(--darkPurple);
                     }
                 }
             }
         }
-        .img{
+
+        .img {
             width: 100%;
             height: 100%;
             @include flexprops(row, flex-end, center);
-            img{
+
+            img {
                 width: 475px;
                 height: 475px;
             }
         }
     }
-    .boxContainer{
+
+    .boxContainer {
         @include flexprops(row, space-evenly, center);
         // flex-wrap: wrap;
+        margin-top: 150px;
         padding: 0px 45px;
         z-index: 20;
-        .box{
+
+        .box {
             z-index: 20;
             height: 300px;
             width: 100%;
@@ -241,32 +257,225 @@
             min-width: 300px;
             text-align: left;
             padding: 30px 30px 30px 30px;
-            border:1px solid var(--borderWhite);
+            border: 1px solid var(--borderWhite);
             transition: all 0.3s;
             cursor: pointer;
             margin: 20px;
 
-            &:hover{
-                border:1px solid var(--lightPurple);
+            &:hover {
+                border: 1px solid var(--lightPurple);
             }
-            i{
+
+            i {
                 font-size: 3rem;
                 color: var(--lightPurple);
                 margin: 12px 0;
             }
-            h3{
+
+            h3 {
                 font-family: var(--secondaryFont);
-                color:var(--white);
+                color: var(--white);
                 font-size: 2rem;
                 line-height: 3.2rem;
                 font-weight: 500;
             }
-            p{
+
+            p {
                 font-family: var(--lightFont);
                 color: var(--lightWhite);
                 font-size: 1rem;
                 line-height: 1.5rem;
                 margin-top: 2px;
+            }
+        }
+    }
+}
+
+.faq {
+    min-height: 1410px;
+    width: 100%;
+    position: relative;
+    margin-top: -150px;
+
+    &::after {
+        position: absolute;
+        content: '';
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background-color: transparent;
+        background-image: linear-gradient(180deg, #0A051C 0%, #08072B 100%);
+        opacity: 1;
+        transition: background 0.3s, border-radius 0.3s, opacity 0.3s;
+    }
+
+    .container {
+        @include flexprops(row-reverse, space-between, center);
+        padding: 0px 45px;
+        min-height: 100vh;
+        margin-top: -50px;
+        position: relative;
+        z-index: 10;
+
+        .text {
+            width: 100%;
+            @include flexprops(column, center, flex-start);
+
+            .faq-container {
+                display: flex;
+                justify-content: center;
+                flex-direction: column;
+                width: 100%;
+
+                .faq-page {
+                    cursor: pointer;
+                    padding: 30px 0px;
+                    width: 100%;
+                    border: none;
+                    outline: none;
+                    transition: 0.4s;
+                    margin: auto;
+                    font-family: var(--secondaryFont);
+                    color: var(--white);
+                    font-size: 2rem;
+                    line-height: 2.5rem;
+                    font-weight: 500;
+                    margin: 7px 0;
+
+                    &:after {
+                        content: '\02795';
+                        /* Unicode character for "plus" sign (+) */
+                        font-size: 13px;
+                        color: #777;
+                        float: right;
+                        margin-left: 5px;
+                    }
+                }
+
+                .active:after {
+                    content: "\2796";
+                }
+
+                .faq-body {
+                    display: none;
+                    overflow: hidden;
+                    padding-bottom: 30px;
+                }
+            }
+
+            .hr-line {
+                width: 100%;
+                margin: auto;
+
+            }
+
+            p {
+                font-family: var(--primaryFont);
+                color: var(--lightPurple);
+                font-size: 1.25rem;
+                line-height: 1.8rem;
+            }
+
+            .desc {
+                font-family: var(--lightFont);
+                color: var(--lightWhite);
+                font-size: 1.25rem;
+                line-height: 1.8rem;
+                margin-top: 2px;
+            }
+
+            .buttonContainer {
+                @include flexprops(row, flex-start, center);
+                margin-top: 35px;
+
+                a {
+                    text-decoration: none;
+                    height: 50px;
+                    text-align: center;
+                    font-family: var(--primaryFont);
+                    font-weight: 600;
+                    font-size: 1rem;
+                    line-height: 1rem;
+                    width: 175px;
+                    display: grid;
+                    place-items: center;
+                    margin: 0 7px;
+                    border: 1px solid #fff;
+                    color: var(--white);
+                    transition: all 0.3s;
+
+                    &:hover {
+                        color: var(--lightPurple);
+                        background-color: var(--white);
+                    }
+                }
+
+                a.first {
+                    margin: 0 7px 0 0;
+                    border: none;
+                    background-color: var(--lightPurple);
+                    color: var(--white);
+                    transition: all 0.3s;
+
+                    &:hover {
+                        background-color: var(--darkPurple);
+                    }
+                }
+            }
+        }
+
+        .img {
+            width: 450px;
+            height: 450px;
+            margin-right: 50px;
+            @include flexprops(row, flex-end, center);
+            position: relative;
+
+            &::after {
+                position: absolute;
+                content: '';
+                top: 0;
+                left: 0;
+                width: 100%;
+                height: 100%;
+                background-image: url('https://templatekit.jegtheme.com/pandoora/wp-content/uploads/sites/171/2021/09/41-e1632812760720.png');
+                background-size: 100% 100%;
+                opacity: 0.15;
+                transition: background 0.3s, border-radius 0.3s, opacity 0.3s;
+            }
+
+            img {
+                width: 475px;
+                height: 475px;
+                z-index: 20;
+            }
+        }
+    }
+
+    .timeline {
+        @include flexprops(column, space-evenly, center);
+        margin-top: 100px;
+        h1 {
+            font-family: var(--secondaryFont);
+            color: var(--white);
+            font-size: 5rem;
+            line-height: 5.6rem;
+            font-weight: 500;
+            margin: 7px 0;
+            position: relative;
+            z-index: 30;
+        }
+        .imgContainer {
+            height: 800px;
+            width: 100%;
+            position: relative;
+            @include flexprops(row, space-evenly, center);
+            z-index: 30;
+
+            img {
+                width: 100%;
+                height: 100%;
             }
         }
     }
