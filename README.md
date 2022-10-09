@@ -1,6 +1,6 @@
 # Hackathon
- 
-# View
+ This repository is for a Hackathon main webpage for the contriutors 
+# View_Sample
 https://anshika75.github.io/Hackathon/
 
 
@@ -33,7 +33,6 @@ create a new branch so that you can upload the code
 ```
 git checkout -b <your_branch_name>
 ```
-Make relavent changes exploratory_data_analysis Folder You can do the analysis in a platform of your choice - kaggle , colab or your local machine .
 
 ```
 git add .
