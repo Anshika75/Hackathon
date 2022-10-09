@@ -1,10 +1,10 @@
 # Hackathon
- 
-# View
+ This repository is for a Hackathon main webpage for the contriutors 
+# View_Sample
 https://anshika75.github.io/Hackathon/
 
 
-# Data_Science_Hacktoberfest
+# Web_Dev_Hacktoberfest
 
 ![image](https://user-images.githubusercontent.com/99472914/192144059-5cd0b329-f238-474b-b475-7385eaa35d05.png)
 [![Open Source Love](https://firstcontributions.github.io/open-source-badges/badges/open-source-v1/open-source.svg)](https://github.com/sj5027052/Hacktoberfest2022)
@@ -16,11 +16,11 @@ Respond to my issues or create your own issue with a problem statement I will as
 Fork this repository
 
 ```
-git clone https://github.com/<your_github_user_name>/exploratory_data_analysis.git
-cd exploratory_data_analysis
+git clone https://github.com/<your_github_user_name>/Hackathon.git
+cd Hackathon
 ```
 ```
-git remote add upstream https://github.com/souvikg544/exploratory_data_analysis.git
+git remote add upstream https://github.com/souvikg544/Hackathon.git
 ```
 ```
 git remote -v
@@ -33,7 +33,6 @@ create a new branch so that you can upload the code
 ```
 git checkout -b <your_branch_name>
 ```
-Make relavent changes exploratory_data_analysis Folder You can do the analysis in a platform of your choice - kaggle , colab or your local machine .
 
 ```
 git add .
