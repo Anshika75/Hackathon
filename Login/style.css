@@ -1,0 +1,162 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400&display=swap');
+
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Roboto', sans-serif;
+}
+
+.wrap {
+    height: 100vh;
+    width: 100vw;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: linear-gradient(#019EE9, #02C7FC);
+    -webkit-background-size: cover;
+    background-size: cover;
+}
+
+.form {
+    width: 70%;
+}
+
+.form-div {
+    width: 100%;
+    position: relative;
+    height: 50px;
+    overflow: hidden;
+    margin-bottom: 15px;
+}
+
+.form-div input{
+    width: 100%;
+    height: 100%;
+    color: #595f5e;
+    padding-top: 20px;
+    border: none;
+    outline: none;
+    font-size: 18px;
+
+}
+
+.form-div label {
+    position: absolute;
+    bottom: 0px;
+    left: 0;
+    width: 100%;
+    height: 100%;
+     pointer-events: none;
+     border-bottom: 1px solid #111;
+
+}
+
+.form-div label:after {
+    content: "";
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    border-bottom: 3px solid #19c8ff;
+    left: 0px;
+    bottom: -1px;
+    transform: translateX(-100%);
+    transition: transform 0.5s ease;
+
+
+}
+
+.label-content {
+    position: absolute;
+    bottom: 5px;
+    left: 0px;
+    transition: all 0.5s ease;
+}
+
+
+.form-div input:focus + .label .label-content, .form-div input:valid + .label .label-content{
+    transform: translateY(-150%);
+    font-size: 14px;
+}
+
+
+
+.form-div input:focus + .label:after{
+    transition: all 0.5s ease;
+    transform: translateX(0%);
+}
+
+
+.card {
+    width: 500px;
+    height: 400px;
+    padding: 15px;
+    border-radius: 10px;
+    background: #fff;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-direction: column;
+}
+
+
+.form-outer {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+
+}
+
+.buttons {
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    width: 100%;
+}
+
+.submit {
+    background: #19c8ff;
+    color: #fff;
+    padding: 10px 12px;
+    border: none;
+    outline: none;
+}
+
+.submit:active {
+    background: #0089b3;
+    color: #fff;
+}
+
+.submit:hover {
+    transition: background 0.2s ease-in-out;
+    background: #00b0e6;
+    color: #fff;
+}
+
+
+
+.forgot {
+    background: #fff;
+    color: #333;
+    padding: 10px 12px;
+    border: none;
+    outline: none;
+    text-decoration: underline;
+}
+
+.header {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 28px;
+}
+
+@media only screen and (max-width: 530px) {
+    .card {
+        width: 90%;
+    }
+    
+}
